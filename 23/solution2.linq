@@ -17,8 +17,7 @@ void Main()
 	processor.Compile();
 	processor.Process();
 
-	processor.GetRegister("a").Dump("Solution:");
-	processor.GetSteps().Dump("Steps:");
+	processor.GetRegister("a").Dump();
 }
 
 class Processor
@@ -29,7 +28,7 @@ class Processor
 		_allowOptimization = optimize;
 		_registers = new Dictionary<string, int>
 		{
-			["a"] = 7,
+			["a"] = 12,
 			["b"] = 0,
 			["c"] = 0,
 			["d"] = 0,
